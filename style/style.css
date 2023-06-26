@@ -12,8 +12,16 @@ body{
     align-items: center;
     background-color: #EFEFEF;
 }
+.slider-container{
+    width: 100%;
+    max-width: 1120px;
+    background-color: gray;
+    padding: 40px 0;
+}
 .slider-content{
     margin: 0 40px;
+    overflow: hidden;
+    border-radius: 25px;
 }
 .card{
     border-radius: 25px;
@@ -30,7 +38,8 @@ body{
     position: relative;
     height: 150px;
     width: 150px;
-    /* background: #fff; */
+    /* background: #fff;
+    border-radius: 50%; */
     padding: 3px;
 }
 .card-image .card-img{
@@ -39,6 +48,40 @@ body{
     object-fit: cover;
     border-radius: 50%;
     border: 4px solid rgb(36, 126, 230);
+}
+.image-content{
+    position: relative;
+    row-gap: 5px;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1c68d2;
+    border-radius: 25px 25px 0 25px;
+}
+.overlay::before{
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: -40px;
+    /* border-radius: 0 25px 0 0; */
+    height: 40px;
+    width: 40px;
+    background-color: #1c68d2;
+} 
+/* before ra after ma same image concide garxa yaha after lai round garera  */
+.overlay::after{      
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;
+    background-color:#fff;
+    border-radius: 0 25px 0 0;
 }
 .name{
     font-weight: 500;
@@ -49,4 +92,20 @@ body{
     text-align: center;
     font-size: 14px;
     color: rgb(93, 91, 91);
+}
+.button{
+    background-color: #1c68d2;
+    padding: 10px 14px;
+    border: none;
+    color: white;
+    margin-top: 14px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+.button:hover{
+    background-color: #0b489f;
 }
