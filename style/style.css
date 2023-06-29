@@ -1,111 +1,138 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
 }
-body{
-    min-height: 100vh;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    background-color: #EFEFEF;
+body {
+  background: linear-gradient(to left top, #548fd8, rgb(155, 12, 48));
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #efefef;
 }
-.slider-container{
-    width: 100%;
-    max-width: 1120px;
-    background-color: gray;
-    padding: 40px 0;
+.slider-container {
+  /* background-color: white; */
+  width: 100%;
+  max-width: 1220px;
+  padding: 40px 0;
 }
-.slider-content{
-    margin: 0 40px;
-    overflow: hidden;
-    border-radius: 25px;
+.slider-content {
+  margin: 0 40px;
+  overflow: hidden;
+  border-radius: 25px;
 }
-.card{
-    border-radius: 25px;
-    background-color: #fff;
-    width: 320px;
+.card {
+  border-radius: 25px;
+  background-color: #fff;
+  /* width: 20%; */
 }
-.image-content, .card-content{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 14px;
+.image-content,
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 14px;
 }
-.card-image{
-    position: relative;
-    height: 150px;
-    width: 150px;
-    /* background: #fff;
+.card-image {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  /* background: #fff;
     border-radius: 50%; */
-    padding: 3px;
+  padding: 3px;
 }
-.card-image .card-img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid rgb(36, 126, 230);
+.card-image .card-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid rgb(36, 126, 230);
 }
-.image-content{
-    position: relative;
-    row-gap: 5px;
+.image-content {
+  position: relative;
+  row-gap: 5px;
 }
-.overlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #1c68d2;
-    border-radius: 25px 25px 0 25px;
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1c68d2;
+  border-radius: 25px 25px 0 25px;
 }
-.overlay::before{
-    position: absolute;
-    content: "";
-    right: 0;
-    bottom: -40px;
-    /* border-radius: 0 25px 0 0; */
-    height: 40px;
-    width: 40px;
-    background-color: #1c68d2;
-} 
+.overlay::before {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: -40px;
+  /* border-radius: 0 25px 0 0; */
+  height: 40px;
+  width: 40px;
+  background-color: #1c68d2;
+}
 /* before ra after ma same image concide garxa yaha after lai round garera  */
-.overlay::after{      
-    position: absolute;
-    content: "";
-    right: 0;
-    bottom: -40px;
-    height: 40px;
-    width: 40px;
-    background-color:#fff;
-    border-radius: 0 25px 0 0;
+.overlay::after {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: -40px;
+  height: 40px;
+  width: 40px;
+  background-color: #fff;
+  border-radius: 0 25px 0 0;
 }
-.name{
-    font-weight: 500;
-    font-size: 18px;
-    color: #280228;
+.name {
+  font-weight: 500;
+  font-size: 18px;
+  color: #280228;
 }
-.description{
-    text-align: center;
-    font-size: 14px;
-    color: rgb(93, 91, 91);
+.description {
+  text-align: center;
+  font-size: 14px;
+  color: rgb(93, 91, 91);
 }
-.button{
-    background-color: #1c68d2;
-    padding: 10px 14px;
-    border: none;
-    color: white;
-    margin-top: 14px;
-    font-size: 16px;
-    font-weight: 500;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-
+.button {
+  background-color: #1c68d2;
+  padding: 10px 14px;
+  border: none;
+  color: white;
+  margin-top: 14px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
-.button:hover{
-    background-color: #0b489f;
+.button:hover {
+  background-color: #0b489f;
 }
+.swiper-navBtn {
+  color: #2a70d1;
+}
+.swiper-navBtn:hover {
+  color: #0b489f;
+}
+.swiper-button-next {
+  right: 0;
+}
+.swiper-button-prev {
+  left: 0;
+}
+.swiper-pagination-bullet{
+background-color: #7b9bf3;
+opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  background-color: #0a1e57;
+  }
+  @media only screen and (max-width: 520px) {
+    .swiper-navBtn {
+      display: none;
+    }
+    .slider-content {
+      margin: 0 10px;
+    }
+  }
